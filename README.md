@@ -1,6 +1,6 @@
 # 🏠 Facebook Daily Picks — n8n Workflow
 
-An automated daily pipeline that scrapes Facebook Marketplace for student-friendly property rentals in Lund, Sweden (3,000–8,000 SEK/month), analyzes them with an LLM, and sends the best pick of the day to subscribers via Telegram.
+An automated daily pipeline that scrapes Facebook Marketplace for student-friendly property rentals currently set for Lund, Sweden (3,000–8,000 SEK/month), analyzes them with an LLM, and sends the best pick of the day to subscribers via Telegram.
 
 > ⚠️ **Work in Progress** — This project is actively being developed. Planned future features include deep reasoning of the picks, such as explaining *why* a listing suits a student's needs beyond basic filtering.
 
@@ -14,10 +14,10 @@ Send a message to the Telegram bot to start receiving daily picks:
 
 | Command | Action |
 |---|---|
-| `[YOUR_SUBSCRIBE_COMMAND]` | Subscribe to daily picks |
-| `[YOUR_UNSUBSCRIBE_COMMAND]` | Remove yourself from the list |
+| `/getdailyhousingpicks` | Subscribe to daily picks |
+| `removemyself` | Remove yourself from the list |
 
-👉 **Bot link:** [Your Bot Link Here]
+👉 **Bot link:** t.me/termonsterbot
 
 Once subscribed, you will receive one curated property listing per day, sent as a photo with details.
 
@@ -42,7 +42,7 @@ Schedule Trigger
 ```
 
 - Listings are filtered to property rentals in **Lund, Sweden** priced between **3,000–8,000 SEK/month**
-- The LLM evaluates listings based on student suitability (price, location, practicality)
+- The LLM evaluates listings based on student suitability (price, location, practicality) see System Prompt LLM Nodes in the workflow for more details
 - All listings are logged to Google Sheets for record-keeping
 - Only subscribers registered via the sub-workflow receive the daily pick
 - You can adjust the send time in the **Schedule Trigger** node to match your preferred time and timezone
