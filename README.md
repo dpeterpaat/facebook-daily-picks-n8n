@@ -1,6 +1,6 @@
 # Facebook Daily Picks — n8n Workflow
 
-![Main Workflow](assets/cover.png)
+![Main Workflow](assets/Cover.png)
 
 An automated daily pipeline that scrapes Facebook Marketplace for student-friendly property rentals currently set for Lund, Sweden (3,000–8,000 SEK/month), analyzes them with an LLM, and sends the best pick of the day to subscribers via Telegram.
 
